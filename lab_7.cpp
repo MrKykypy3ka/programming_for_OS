@@ -6,7 +6,6 @@ using namespace std;
 
 int main()
 {
-    // Открываем файл с исходным кодом на языке Си
     ifstream inputFile("input.c");
 
     if (!inputFile.is_open()) {
@@ -14,10 +13,8 @@ int main()
         return 1;
     }
 
-    // Создаем стек для хранения открывающихся фигурных скобок
     stack<int> stack;
 
-    // Считываем файл посимвольно и проверяем скобки
     char ch;
     int pos = 0;
     bool errorFound = false;
@@ -52,7 +49,6 @@ int main()
         cout << "Скобки расставлены правильно" << endl;
     }
 
-    // Записываем результат в файл и на экран
     ofstream outputFile("out.txt");
 
     if (!outputFile.is_open()) {
